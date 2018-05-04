@@ -1,0 +1,17 @@
+{
+  "name": "cypresskatest2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "ke",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  }
+}
