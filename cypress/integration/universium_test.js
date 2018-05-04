@@ -169,7 +169,7 @@ describe("SLA Dashboard", function () {
 		cy.get('button[title="SLA-Avvik"][style="color: lightgray;"]:first').scrollIntoView().click()
 		cy.get('div.container[data-bind="foreach: Tickets"] div.well').should('have.length', 0)
 		cy.get('div.modal:visible button.btn-primary:first').click()
-	})*/
+	})
 
 	it ("SLA Tickets: Register a new ticket, check that it is added and verify it's default state.",function(){
 		cy.get('tbody td button[title="SLA-Avvik"][style="color: lightgray;"]').first().parent().parent().parent().then(($row) => {
@@ -193,7 +193,7 @@ describe("SLA Dashboard", function () {
 		cy.get('div.modal:visible span[data-bind="text: SLAFieldName"]').should('not.have.value', 'Velg...')
 		cy.get('div.modal:visible div.well input#slaFields_reportmemo_').should('have.value',Cypress.env('lipsum_short'))
 	})
-
+	
 	it('SLA Tickets: Resolve ticket. Verify readonly state and that row icon is blue.', function() {
 		cy.get('div.modal:visible button[title="Rettet"]').click();
 		cy.get('div.modal:visible button[title="Rettet"]').should('be.disabled')
@@ -205,6 +205,6 @@ describe("SLA Dashboard", function () {
 		cy.get('div.modal:visible button[title="Slett"]').click();
 		cy.get('div.modal:visible div.well ul li:visible').should('have.length', 0);
 		cy.get('tbody tr:eq('+Cypress.env('rowindex')+') td button[title="SLA-Avvik"]:first').scrollIntoView().should('have.css', 'color', 'rgb(211, 211, 211)')
-	})
+	})*/
 })
 
