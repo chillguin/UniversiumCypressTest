@@ -159,7 +159,7 @@ describe("SLA Dashboard", function () {
 		});
 	})
 
-	/* SLA TICKETS */
+	/* SLA TICKETS 
 	it('SLA Tickets: Click "SLA-Avvik" on a request with no indication of existing tickets.', function() {
 		cy.resetSearch()
 		cy.get('#dateFrom_').uncheck()
@@ -169,7 +169,7 @@ describe("SLA Dashboard", function () {
 		cy.get('button[title="SLA-Avvik"][style="color: lightgray;"]:first').scrollIntoView().click()
 		cy.get('div.container[data-bind="foreach: Tickets"] div.well').should('have.length', 0)
 		cy.get('div.modal:visible button.btn-primary:first').click()
-	})
+	})*/
 
 	it ("SLA Tickets: Register a new ticket, check that it is added and verify it's default state.",function(){
 		cy.get('tbody td button[title="SLA-Avvik"][style="color: lightgray;"]').first().parent().parent().parent().then(($row) => {
